@@ -3140,6 +3140,7 @@ __metadata:
     express: ^4.18.2
     pokedraft-types: 1.0.0
     ts-node: ^10.9.1
+    typeorm: ^0.3.17
     typescript: ^5.1.6
   languageName: unknown
   linkType: soft
