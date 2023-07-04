@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "packageManager": "yarn@3.6.1",
+  "devDependencies": {
+    "@types/node": "^20.3.3",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
+    "@typescript-eslint/parser": "^5.61.0",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.8",
+    "typescript": "^5.1.6"
+  },
+  "workspaces": [
+    "./packages/api",
+    "./packages/draft-server",
+    "./packages/types",
+    "./packages/web"
+  ],
+  "scripts": {
+    "api": "yarn workspace pokedraft-api",
+    "draft-server": "yarn workspace pokedraft-draft-server",
+    "types": "yarn workspace pokedraft-types",
+    "web": "yarn workspace pokedraft-web",
+    "lint": "eslint . && prettier --check .",
+    "lint-fix": "eslint --fix . && prettier --write ."
+  }
+}

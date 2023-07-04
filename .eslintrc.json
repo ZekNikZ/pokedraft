@@ -1,0 +1,18 @@
+{
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "eqeqeq": "error",
+    "curly": "error",
+    "quotes": ["error", "double"],
+    "no-constructor-return": "error",
+    "no-duplicate-imports": "error",
+    "camelcase": "error",
+    "capitalized-comments": "warn",
+    "no-var": "error",
+    "prefer-const": "warn",
+    "array-bracket-newline": ["warn", "consistent"],
+    "array-element-newline": ["warn", "consistent"]
+  }
+}
