@@ -5,7 +5,7 @@ import { Draft } from "./draft";
 @Entity()
 export class Team {
   @PrimaryGeneratedColumn()
-  id!: number;
+  teamId!: number;
 
   @ManyToOne(() => User)
   @JoinColumn()

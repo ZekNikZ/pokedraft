@@ -4,7 +4,7 @@ import { User } from "./user";
 @Entity()
 export class Format {
   @PrimaryGeneratedColumn()
-  id!: number;
+  formatId!: number;
 
   @ManyToOne(() => User)
   @JoinColumn()

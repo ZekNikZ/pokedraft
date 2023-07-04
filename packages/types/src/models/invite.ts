@@ -4,7 +4,7 @@ import { Draft } from "./draft";
 @Entity()
 export class Invite {
   @PrimaryGeneratedColumn()
-  id!: number;
+  inviteId!: number;
 
   @ManyToOne(() => Draft)
   @JoinColumn()

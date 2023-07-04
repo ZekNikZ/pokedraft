@@ -1,7 +1,8 @@
-import express from "express";
+import express, { NextFunction, Request, Response } from "express";
 import { routes } from "./routes/index";
 import { db } from "./db";
 import { exit } from "process";
+import { sendError } from "./utils/errors";
 
 async function main(): Promise<void> {
   try {
@@ -16,7 +17,14 @@ async function main(): Promise<void> {
   const app = express();
   const port = 4000;
 
+  // Body parser
   app.use(express.json());
+
+  // Error handler
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any
+  app.use((err: any, req: Request, res: Response, next: NextFunction) => {
+    return sendError(res, 500, err);
+  });
 
   app.get("/", (req, res) => {
     res.send("Hello, world!");
