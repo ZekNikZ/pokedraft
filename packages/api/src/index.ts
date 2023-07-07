@@ -3,6 +3,7 @@ import { routes } from "./routes/index";
 import { db } from "./db";
 import { exit } from "process";
 import { sendError } from "./utils/errors";
+import cors from "cors";
 
 async function main(): Promise<void> {
   try {
@@ -19,6 +20,12 @@ async function main(): Promise<void> {
 
   // Body parser
   app.use(express.json());
+
+  app.use(
+    cors({
+      origin: process.env.WEB_URL ?? "http://localhost:3000",
+    })
+  );
 
   // Error handler
   // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any
