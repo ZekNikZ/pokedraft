@@ -11,7 +11,9 @@ draftsRouter.get("/", async (req, res) => {
 });
 
 draftsRouter.post("/", async (req, res) => {
-  return res.send(await draftRepository.save(new Draft()));
+  const draft = new Draft()
+  draft.draftName = ""
+  return res.send(await draftRepository.save(draft));
 });
 
 draftsRouter.get("/:draftId", async (req, res) => {
