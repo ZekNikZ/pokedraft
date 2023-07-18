@@ -51,6 +51,9 @@ draftsRouter.put("/:draftId", async (req, res) => {
   }
 
   // Save new draft
-  const newDraft: Draft = { ...existingObject, ...req.body };
+  const newDraft: Draft = { ...existingObject };
+
+  newDraft.draftName = body.draftName;
+
   return res.send(await draftRepository.save(newDraft));
 });
