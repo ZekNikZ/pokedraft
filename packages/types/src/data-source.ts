@@ -8,7 +8,7 @@ export function createDataSource(options?: Partial<MysqlConnectionOptions>) {
     host: "localhost",
     port: 3306,
     username: "root",
-    password: "hotmagenta",
+    password: "password",
     database: "pokedraft",
     synchronize: true,
     logging: true,
