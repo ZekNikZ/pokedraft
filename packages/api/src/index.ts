@@ -4,6 +4,7 @@ import { db } from "./db";
 import { exit } from "process";
 import { sendError } from "./utils/errors";
 import cors from "cors";
+import config from "./utils/config";
 
 async function main(): Promise<void> {
   try {
@@ -23,7 +24,7 @@ async function main(): Promise<void> {
 
   app.use(
     cors({
-      origin: process.env.WEB_URL ?? "http://localhost:3000",
+      origin: config.WEB_URL,
     })
   );
 
