@@ -1971,6 +1971,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fp-ts@npm:^2.16.1":
+  version: 2.16.1
+  resolution: "fp-ts@npm:2.16.1"
+  checksum: 94e8bb1d037fdc44414ac93bbabecc3f94fb798d6564e77427ae2ecfa0f77681ec35968598d7b0cbf8274566469c7b42e8727390eb889e1121c199341939c2a3
+  languageName: node
+  linkType: hard
+
 "fresh@npm:0.5.2":
   version: 0.5.2
   resolution: "fresh@npm:0.5.2"
@@ -2344,6 +2351,27 @@ __metadata:
     has: ^1.0.3
     side-channel: ^1.0.4
   checksum: 97e84046bf9e7574d0956bd98d7162313ce7057883b6db6c5c7b5e5f05688864b0978ba07610c726d15d66544ffe4b1050107d93f8a39ebc59b15d8b429b497a
+  languageName: node
+  linkType: hard
+
+"io-ts-types@npm:^0.5.19":
+  version: 0.5.19
+  resolution: "io-ts-types@npm:0.5.19"
+  peerDependencies:
+    fp-ts: ^2.0.0
+    io-ts: ^2.0.0
+    monocle-ts: ^2.0.0
+    newtype-ts: ^0.3.2
+  checksum: 4cf8688b9fd3878bebc332f9cdf612e72ce45bcc8ab4a534d413a4f80564458482bc1c86eed997ca566e65ac85790d3c7a8ccb511f8c17108cd647e070db7790
+  languageName: node
+  linkType: hard
+
+"io-ts@npm:^2.2.20":
+  version: 2.2.20
+  resolution: "io-ts@npm:2.2.20"
+  peerDependencies:
+    fp-ts: ^2.5.0
+  checksum: 72517bf72ab1ad61b81960cb37f46e7a9f6dc84235b7d9b62f346ca84120dd89134b652fc3a0b9751129331084fd3e059349561bb96587d91ba7b40985fe7aac
   languageName: node
   linkType: hard
 
@@ -3289,6 +3317,8 @@ __metadata:
     cors: ^2.8.5
     dotenv: ^16.3.1
     express: ^4.18.2
+    fp-ts: ^2.16.1
+    io-ts: ^2.2.20
     jsonwebtoken: ^9.0.1
     pokedraft-types: 1.0.0
     ts-node: ^10.9.1
@@ -3310,6 +3340,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "pokedraft-types@workspace:packages/types"
   dependencies:
+    fp-ts: ^2.16.1
+    io-ts: ^2.2.20
+    io-ts-types: ^0.5.19
     mysql: ^2.18.1
     typeorm: ^0.3.17
     typescript: ^5.1.6

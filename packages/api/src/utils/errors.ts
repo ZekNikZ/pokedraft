@@ -1,4 +1,5 @@
 import { Response } from "express";
+import { ResponseError } from "pokedraft-types";
 
 const statusCodes = {
   400: "Bad Request",
@@ -9,8 +10,10 @@ const statusCodes = {
 export type StatusCode = keyof typeof statusCodes;
 
 export function sendError(res: Response, statusCode: StatusCode, message: string) {
-  return res.send({
+  const error: ResponseError = {
+    $err: statusCode,
     error: `${statusCode} ${statusCodes[statusCode]}`,
     message: message,
-  });
+  };
+  return res.send(error);
 }

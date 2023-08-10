@@ -53,7 +53,7 @@ draftsRouter.put("/:draftId", async (req, res) => {
   // Save new draft
   const newDraft: Draft = { ...existingObject };
 
-  newDraft.draftName = body.draftName;
+  newDraft.name = body.name;
 
   return res.send(await draftRepository.save(newDraft));
 });
